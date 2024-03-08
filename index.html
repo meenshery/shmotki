@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О! Шмотки</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="address.html" class="nav-link">Наши адреса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="catalogue.html" class="nav-link">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vac.html" class="nav-link">Стать частью команды</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="accountreg.html" class="button header-button">Сдать вещи</a>
+        </div>
+    </header>
+
+    <main>
+       
+        <!-- <div class="slideshow-container">
+            <div class="mySlides fade" style="display: block;">
+              <div class="numbertext">1 / 3</div>
+              <img src="img/img1.jpg" style="width:50%;" class="carousel-img">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="img/img2.jpg" style="width:50%" class="carousel-img">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="img/img3.jpg" style="width:50%" class="carousel-img">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div> -->
+       
+        <section class="section-hero herofade">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="section-hero-heading">
+                        О шмотках
+                    </h1>
+                    <p class="section-hero-description">
+                        о! Шмотки - это современный секонд-хенд, с помощью которого можно не только обновить гардероб, купив винтажную одежду, но и сдать ненужные вещи! В нашем секонд-хенде можно найти как дизайнерские вещи по доступным ценам, так и уникальные находки с историей, которые добавят индивидуальности вашему гардеробу!
+                </p>
+                    <a href="accountreg.html" class="button button-big">Сдать вещи</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section-important">
+            <div class="container">
+                <div class="important-content">
+                    <h1 class="section-important-heading">
+                        Почему это важно
+                    </h1>
+                    <p class="section-important-description">
+                        Наш проект направлен на борьбу с проблемой перепотребления - одежда из масс-маркета производится в огромных масштабах, а после в таких же масштабах скупается и выбрасывается. Покупка и продажа бывшей в употреблении одежды помогает уменьшить количество текстильных отходов, поощряет устойчивое потребление, предлагая покупателям не прибегать к постоянной покупке новой одежды. 
+                        К тому же, "О! Шмотки" предлагает клиентам услугу сбора вещей, которые впоследствии идут или на продажу непосредственно в секонде или на переработку. 
+
+                        
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section-howtobuy">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="section-hero-heading">
+                        Как купить?
+                    </h1>
+                    <p class="section-hero-description">
+                        На сайте нашего проекта есть вкладка "Каталог", в котором можно посмотреть вещи в наличии. Ассортимент обновляется ежедневно, поэтому вы точно ничего не пропустите! А если хотите что-то примерить или посмотреть на одежду вживую, то у нас есть три шоурума в москве!
+                </p>
+                    <a href="catalogue.html" class="button button-big">Онлайн-каталог</a>
+                    <a href="address.html" class="button button-big">Адреса магазинов</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section-contacts">
+            <div class="container">
+                <h2 class="section-heading">
+                    Контакты
+                </h2>
+                <ul class="section-contacts-list">
+                    <li class="section-contacts-item">
+                        <span class="section-contacts-icon section-contacts-icon-gps">
+
+                        </span>
+                        <strong class="section-contacts-heading">Наш офис</strong>
+                        <div class="section-contacts-info">
+                            <a href="https://yandex.ru/maps/213/moscow/house/ulitsa_zatsepa_23/Z04YcARiTUQEQFtvfXtzeHhkbA==/?ll=37.632017%2C55.729440&z=19" class="section-contacts-link">
+                            Г. Москва, ул. Зацепа 23
+                        </a>
+                        </div>
+                    </li>
+                    <li class="section-contacts-item">
+                        <span class="section-contacts-icon section-contacts-icon-phone">
+
+                        </span>
+                        <strong class="section-contacts-heading">Наш телефон</strong>
+                        <div class="section-contacts-info">
+                            <a href="tel:+79154477450" class="section-contacts-link">+7 (915) 447-74-50</a>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="section-contacts-item">
+                        <span class="section-contacts-icon section-contacts-icon-mail">
+                        </span>
+                        <strong class="section-contacts-heading">Наша почта</strong>
+                        <div class="section-contacts-info">
+                            <a href="mailto:shmotki@gmail.com" class="section-contacts-link">shmotki@gmail.com</a>
+                            <br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="" class="footer-logo">
+                    <img src="img/icon.svg" alt="logo" class="footer-logo-img">
+                </a>
+                <small class="footer-copyrights"> 
+                    Все изображения взяты из открытых источников
+                </small>
+        </div>
+    </footer>
+</body>
+
+</html>
